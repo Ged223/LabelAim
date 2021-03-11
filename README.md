@@ -1,4 +1,4 @@
-### Názov týmu: ______
+### Názov týmu: SlabiProgramatori
 ### Členovia tymu: Juraj Seman, Barbora Horvátová, Patrik Ištván
 # Názov hry: LabelAim
 ## Hlavný cieľ:
