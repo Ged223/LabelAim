@@ -2,6 +2,7 @@ package game;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.dsl.FXGL;
 
 import java.util.Map;
 
@@ -35,8 +36,10 @@ public class GameApp extends GameApplication {
     }
 
     @Override
-    protected void initGame() {
-        super.initGame();
+    protected void initGame() { //method to initialize all entities at the start of the game
+        FXGL.getGameWorld().addEntityFactory(new OurFactory());
+        FXGL.spawn("player",900,FXGL.getAppHeight()/2-20);
+        FXGL.spawn("enemy",100,100);
     }
 
     @Override
