@@ -2,9 +2,13 @@ package game;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
-import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.core.math.FXGLMath;
+import javafx.geometry.Rectangle2D;
+import javafx.util.Duration;
 
 import java.util.Map;
+
+import static com.almasb.fxgl.dsl.FXGL.*;
 
 public class GameApp extends GameApplication {
 
@@ -37,9 +41,15 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initGame() { //method to initialize all entities at the start of the game
-        FXGL.getGameWorld().addEntityFactory(new OurFactory());
-        FXGL.spawn("player",900,FXGL.getAppHeight()/2-20);
-        FXGL.spawn("enemy",100,100);
+        getGameWorld().addEntityFactory(new OurFactory());
+        spawn("player", 900, getAppHeight() / 2 - 20);
+
+        run(() -> { //runs repeatedly
+            spawn("enemy", FXGLMath.randomPoint(
+                    new Rectangle2D(0, 0, 0, getAppHeight()))
+                    //spawn enemy on a random point within the bounds(Rectangle2D)
+            );
+        }, Duration.seconds(1));//set the interval of the run method
     }
 
     @Override
