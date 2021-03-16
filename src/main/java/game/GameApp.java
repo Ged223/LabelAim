@@ -3,7 +3,14 @@ package game;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.core.math.FXGLMath;
+import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.input.KeyTrigger;
+import com.almasb.fxgl.input.Trigger;
+import com.almasb.fxgl.input.TriggerListener;
+import javafx.beans.property.StringProperty;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.input.KeyCode;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.util.Map;
@@ -31,12 +38,34 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initInput() {
-        super.initInput();
+        //listen for any generic trigger event
+        System.out.println(getInput().getAllBindings());
+        getInput().addTriggerListener(new TriggerListener() {
+            @Override
+            protected void onActionBegin(Trigger trigger) {
+                System.out.println("Begin: " + trigger);
+                if (trigger.isKey()) {
+                    var keyTrigger = (KeyTrigger) trigger;
+                    // key is being pressed now
+                    var key = keyTrigger.getKey();
+                    if (key.equals(KeyCode.SPACE)) {
+                        //TODO deleting enemies based on their name here
+                        getWorldProperties().setValue("written","");
+                    } else if (key.isLetterKey()) {
+                        //get the written property
+                        StringProperty written = getWorldProperties().stringProperty("written");
+                        //append to it the pressed key
+                        getWorldProperties().setValue("written", written.getValue() + key.toString().toLowerCase());
+                    }
+
+                }
+            }
+        });
     }
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
-        super.initGameVars(vars);
+        vars.put("written", "");
     }
 
     @Override
@@ -59,7 +88,13 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI() {
-        super.initUI();
+        //create a text to display written characters
+        Text written = new Text();
+        written.setTranslateX(900);
+        written.setTranslateY(getAppHeight() / 2 + 40);
+        //bind so that it always displays the value of the world property "written"
+        written.textProperty().bind(FXGL.getWorldProperties().stringProperty("written"));
+        getGameScene().addUINode(written);//add to the scene graph
     }
 
     @Override

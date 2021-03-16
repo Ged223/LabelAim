@@ -16,7 +16,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ...
 ## Rozdelenie uloh na 1. týžden:
 ### Juraj:
-- pod hracom sa zobrazuje text ktory hrac napisal, po stlaceni medzernika sa napisany text zmaze
+- pod hracom sa zobrazuje text ktory hrac napisal, po stlaceni medzernika sa napisany text zmaze - DONE
 - pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z)
 - nepriatel ktoreho meno bolo napisane pri stlaceni medzernika zomrie/zmizne
 ### Barbora:
