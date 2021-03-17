@@ -39,7 +39,6 @@ public class GameApp extends GameApplication {
     @Override
     protected void initInput() {
         //listen for any generic trigger event
-        System.out.println(getInput().getAllBindings());
         getInput().addTriggerListener(new TriggerListener() {
             @Override
             protected void onActionBegin(Trigger trigger) {
