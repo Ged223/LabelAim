@@ -23,8 +23,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - grafika hraca, nepriatelov, rakety, pozadie,
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 ### Patrik: 
-- hrac je na pravej strane obrazovky, v strede vertikalne, nedokaze sa hybat
-- nepriatelia sa objavuju na lavej strane obrazovky, postupne sa posuvaju smerom k pravej strane
+- hrac je na pravej strane obrazovky, v strede vertikalne, nedokaze sa hybat - DONE
+- nepriatelia sa objavuju na lavej strane obrazovky, postupne sa posuvaju smerom k pravej strane - DONE
 
 #### Používame FXGL 
 beginner-friendly JavaFX game framework - https://github.com/AlmasB/FXGL
