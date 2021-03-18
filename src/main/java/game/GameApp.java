@@ -16,6 +16,7 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static javafx.util.Duration.seconds;
 
 public class GameApp extends GameApplication {
 
@@ -77,7 +78,13 @@ public class GameApp extends GameApplication {
                     new Rectangle2D(0, 0, 0, getAppHeight()))
                     //spawn enemy on a random point within the bounds(Rectangle2D)
             );
-        }, Duration.seconds(1));//set the interval of the run method
+        }, seconds(1));//set the interval of the run method
+
+
+        runOnce(() -> {
+            var input = getSceneService().getInput();
+            input.rebind(input.getActionByName("Screenshot"), KeyCode.F12);
+        }, seconds(0.1));
     }
 
     @Override
