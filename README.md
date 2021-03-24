@@ -13,6 +13,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - po stlaceni medzernika sa napisany text zmaze, a ak sa zhodoval s nejakym nepriatelom tak sa k tomu nepriatelovi vystreli navadzacia raketa
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
+- pridat zvukove efekty
+- zmenit font na krajsi
 - ...
 ## Rozdelenie uloh:
 ### Juraj:
