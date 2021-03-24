@@ -12,7 +12,9 @@ import javafx.beans.property.StringProperty;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +55,7 @@ public class GameApp extends GameApplication {
                     var keyTrigger = (KeyTrigger) trigger;
                     // key is being pressed now
                     var key = keyTrigger.getKey();
-                    if (key.equals(KeyCode.SPACE)) {
+                    if (key.equals(KeyCode.SPACE) || key.equals(KeyCode.ENTER)) {
                         shoot();
                     } else if (key.isLetterKey()) {
                         //get the written property
@@ -79,10 +81,10 @@ public class GameApp extends GameApplication {
         spawn("player", 900, getAppHeight() / 2 - 20);
         run(() -> { //runs repeatedly
             spawn("enemy", FXGLMath.randomPoint(
-                    new Rectangle2D(0, 20, 0, getAppHeight()-50))
+                    new Rectangle2D(0, 20, 0, getAppHeight() - 150))
                     //spawn enemy on a random point within the bounds(Rectangle2D)
             );
-        }, millis(FXGL.random(500, 1500)));//set the interval of the run method
+        }, millis(1000));//set the interval of the run method
 
 
         runOnce(() -> {
@@ -98,11 +100,15 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI() {
-        //create a text to display written characters
         getGameScene().setBackgroundRepeat(FXGL.image("background.png"));
+        //create a text to display written characters
         Text written = new Text();
-        written.setTranslateX(900);
-        written.setTranslateY(getAppHeight() / 2 + 40);
+        written.setStroke(Color.BLACK);
+        written.setFill(Color.WHITE);
+        written.strokeWidthProperty().setValue(1.5);
+        written.setFont(new Font(35));
+        written.setTranslateX(getAppWidth() / 2 - 15);
+        written.setTranslateY(getAppHeight() - 20);
         //bind so that it always displays the value of the world property "written"
         written.textProperty().bind(FXGL.getWorldProperties().stringProperty("written"));
         getGameScene().addUINode(written);//add to the scene graph
