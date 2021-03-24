@@ -54,7 +54,7 @@ public class GameApp extends GameApplication {
                     } else if (key.isLetterKey()) {
                         //get the written property
                         StringProperty written = getWorldProperties().stringProperty("written");
-                        //append to it the pressed key
+                        //append the pressed key
                         getWorldProperties().setValue("written", written.getValue() + key.toString().toLowerCase());
                     }
 

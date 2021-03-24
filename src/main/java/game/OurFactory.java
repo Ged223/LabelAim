@@ -16,15 +16,16 @@ public class OurFactory implements EntityFactory {
     @Spawns("player")
     public Entity newPlayer(SpawnData data) {
         return entityBuilder(data)
-                .view(new Rectangle(40, 40, Color.BLUE))
+                .viewWithBBox(new Rectangle(40, 40, Color.BLUE))
                 .build();
     }
 
     @Spawns("enemy")
     public Entity newEnemy(SpawnData data) {
         return entityBuilder(data)
-                .view(new Rectangle(30, 15, Color.RED))
+                .viewWithBBox(new Rectangle(30, 15, Color.RED))
                 .with(new ProjectileComponent(new Point2D(1, 0),200))
+                .with(new NameComponent())
                 .build();
     }
 
