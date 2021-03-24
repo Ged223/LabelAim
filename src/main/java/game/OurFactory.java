@@ -24,7 +24,7 @@ public class OurFactory implements EntityFactory {
     public Entity newEnemy(SpawnData data) {
         return entityBuilder(data)
                 .viewWithBBox(new Rectangle(30, 15, Color.RED))
-                .with(new ProjectileComponent(new Point2D(1, 0),200))
+                .with(new ProjectileComponent(new Point2D(1, 0),120))
                 .with(new NameComponent())
                 .build();
     }

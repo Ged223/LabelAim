@@ -16,7 +16,7 @@ public class NameComponent extends Component {
 
     @Override
     public void onAdded() {
-        name = "namePlaceholder";
+        name = generateName();
         nameText.setText(name);
         FXGL.getGameScene().addUINode(nameText);
     }
@@ -31,5 +31,10 @@ public class NameComponent extends Component {
     @Override
     public void onRemoved() {
         super.onRemoved();
+    }
+
+    private String generateName(){
+        char letter = (char) FXGL.random(65,90);
+        return Character.toString(letter);
     }
 }

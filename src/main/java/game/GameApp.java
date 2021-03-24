@@ -16,6 +16,7 @@ import javafx.util.Duration;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
+import static javafx.util.Duration.millis;
 import static javafx.util.Duration.seconds;
 
 public class GameApp extends GameApplication {
@@ -55,7 +56,7 @@ public class GameApp extends GameApplication {
                         //get the written property
                         StringProperty written = getWorldProperties().stringProperty("written");
                         //append the pressed key
-                        getWorldProperties().setValue("written", written.getValue() + key.toString().toLowerCase());
+                        getWorldProperties().setValue("written", written.getValue() + key.toString());
                     }
 
                 }
@@ -78,7 +79,7 @@ public class GameApp extends GameApplication {
                     new Rectangle2D(0, 0, 0, getAppHeight()))
                     //spawn enemy on a random point within the bounds(Rectangle2D)
             );
-        }, seconds(1));//set the interval of the run method
+        }, millis(FXGL.random(500,1500)));//set the interval of the run method
 
 
         runOnce(() -> {
