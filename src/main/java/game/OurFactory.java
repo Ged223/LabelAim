@@ -1,5 +1,6 @@
 package game;
 
+import com.almasb.fxgl.dsl.components.OffscreenCleanComponent;
 import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
@@ -26,6 +27,7 @@ public class OurFactory implements EntityFactory {
                 .viewWithBBox(new Rectangle(30, 15, Color.RED))
                 .with(new ProjectileComponent(new Point2D(1, 0),120))
                 .with(new NameComponent())
+                .with(new OffscreenCleanComponent())
                 .build();
     }
 
