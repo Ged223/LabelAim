@@ -17,6 +17,7 @@ public class OurFactory implements EntityFactory {
     @Spawns("player")
     public Entity newPlayer(SpawnData data) {
         return entityBuilder(data)
+                .type(EntityType.PLAYER)
                 .viewWithBBox(new Rectangle(40, 40, Color.BLUE))
                 .build();
     }
@@ -24,6 +25,7 @@ public class OurFactory implements EntityFactory {
     @Spawns("enemy")
     public Entity newEnemy(SpawnData data) {
         return entityBuilder(data)
+                .type(EntityType.ENEMY)
                 .viewWithBBox(new Rectangle(30, 15, Color.RED))
                 .with(new ProjectileComponent(new Point2D(1, 0),120))
                 .with(new NameComponent())

@@ -4,6 +4,7 @@ import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.KeyTrigger;
 import com.almasb.fxgl.input.Trigger;
 import com.almasb.fxgl.input.TriggerListener;
@@ -11,8 +12,10 @@ import javafx.beans.property.StringProperty;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -50,8 +53,7 @@ public class GameApp extends GameApplication {
                     // key is being pressed now
                     var key = keyTrigger.getKey();
                     if (key.equals(KeyCode.SPACE)) {
-                        //TODO deleting enemies based on their name here
-                        getWorldProperties().setValue("written","");
+                        shoot();
                     } else if (key.isLetterKey()) {
                         //get the written property
                         StringProperty written = getWorldProperties().stringProperty("written");
@@ -67,19 +69,19 @@ public class GameApp extends GameApplication {
     @Override
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("written", "");
+        vars.put("enemyList", new ArrayList<Entity>());
     }
 
     @Override
     protected void initGame() { //method to initialize all entities at the start of the game
         getGameWorld().addEntityFactory(new OurFactory());
         spawn("player", 900, getAppHeight() / 2 - 20);
-
         run(() -> { //runs repeatedly
             spawn("enemy", FXGLMath.randomPoint(
-                    new Rectangle2D(0, 0, 0, getAppHeight()))
+                    new Rectangle2D(0, 20, 0, getAppHeight()-50))
                     //spawn enemy on a random point within the bounds(Rectangle2D)
             );
-        }, millis(FXGL.random(500,1500)));//set the interval of the run method
+        }, millis(FXGL.random(500, 1500)));//set the interval of the run method
 
 
         runOnce(() -> {
@@ -108,4 +110,17 @@ public class GameApp extends GameApplication {
     protected void onUpdate(double tpf) {
         super.onUpdate(tpf);
     }
+
+    private void shoot() {
+        String writtenName = getWorldProperties().getValue("written");
+        getWorldProperties().setValue("written", "");
+
+        List<Entity> enemies = getGameWorld().getEntitiesByType(EntityType.ENEMY);
+        for (Entity enemy : enemies) {
+            if (enemy.getComponent(NameComponent.class).getName().equals(writtenName)) {
+                enemy.removeFromWorld();
+            }
+        }
+    }
+
 }

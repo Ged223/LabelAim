@@ -30,11 +30,15 @@ public class NameComponent extends Component {
 
     @Override
     public void onRemoved() {
-        super.onRemoved();
+        FXGL.getGameScene().removeUINode(nameText);
     }
 
     private String generateName(){
         char letter = (char) FXGL.random(65,90);
         return Character.toString(letter);
+    }
+
+    public String getName() {
+        return name;
     }
 }
