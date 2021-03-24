@@ -14,7 +14,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
 - ...
-## Rozdelenie uloh na 1. týžden:
+## Rozdelenie uloh:
 ### Juraj:
 - pod hracom sa zobrazuje text ktory hrac napisal, po stlaceni medzernika sa napisany text zmaze - DONE
 - pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z)
