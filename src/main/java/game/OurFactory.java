@@ -25,7 +25,6 @@ public class OurFactory implements EntityFactory {
         return entityBuilder(data)
                 //.viewWithBBox(new Rectangle(30, 15, Color.RED))
                 .with(new EnemyAnimationComponent())
-                .with(new ProjectileComponent(new Point2D(1, 0),200))
                 //.viewWithBBox(new Rectangle(30, 15, Color.RED))
                 .with(new ProjectileComponent(new Point2D(1, 0),120))
                 .with(new NameComponent())
