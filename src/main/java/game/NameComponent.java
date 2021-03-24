@@ -2,19 +2,15 @@ package game;
 
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.component.Component;
-import com.almasb.fxgl.texture.AnimatedTexture;
-import com.almasb.fxgl.texture.AnimationChannel;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
-
 
 public class NameComponent extends Component {
 
     private String name;
     private Text nameText = new Text();
 
-    public NameComponent(){
+    public NameComponent() {
         nameText.setStroke(Color.WHITE);
     }
 
@@ -28,9 +24,9 @@ public class NameComponent extends Component {
 
     @Override
     public void onUpdate(double tpf) {
-        int centerPixelsAmount = (name.length()-15)*3;
-        nameText.setTranslateX(entity.getX()-(centerPixelsAmount));
-        nameText.setTranslateY(entity.getY()+(120));
+        int centerPixelsAmount = (name.length() - 15) * 3;
+        nameText.setTranslateX(entity.getX() - (centerPixelsAmount));
+        nameText.setTranslateY(entity.getY() + (120));
     }
 
     @Override
@@ -38,8 +34,8 @@ public class NameComponent extends Component {
         FXGL.getGameScene().removeUINode(nameText);
     }
 
-    private String generateName(){
-        char letter = (char) FXGL.random(65,90);
+    private String generateName() {
+        char letter = (char) FXGL.random(65, 90);
         return Character.toString(letter);
     }
 

@@ -7,14 +7,16 @@ import com.almasb.fxgl.texture.AnimationChannel;
 import javafx.geometry.Point2D;
 import javafx.util.Duration;
 
-public class EnemyAnimationComponent extends Component{
+public class EnemyAnimationComponent extends Component {
     private AnimatedTexture texture;
     private AnimationChannel animIdle;
+
     public EnemyAnimationComponent() {
-        animIdle = new AnimationChannel(FXGL.image("enemy_animation.png"),4, 104, 103, Duration.seconds(1), 0, 0);
+        animIdle = new AnimationChannel(FXGL.image("enemy_animation.png"), 4, 104, 103, Duration.seconds(1), 0, 0);
 
         texture = new AnimatedTexture(animIdle);
     }
+
     @Override
     public void onAdded() {
         entity.getTransformComponent().setScaleOrigin(new Point2D(16, 21));
