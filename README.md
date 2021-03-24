@@ -4,7 +4,7 @@
 ## Hlavný cieľ:
 Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich meno.
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
-## Nápady na features/ulohy na rozdelenie (navrhu najvyssia priorita):
+## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - kazdy nepriatel ma zobrazeny nahodne vygenerovany nazov, ktory moze byt hocijake slovo
 - zmenit font na krajsi
