@@ -2,7 +2,10 @@ package game;
 
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.component.Component;
+import com.almasb.fxgl.texture.AnimatedTexture;
+import com.almasb.fxgl.texture.AnimationChannel;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 
 public class NameComponent extends Component {
@@ -13,6 +16,7 @@ public class NameComponent extends Component {
     public NameComponent(){
 
     }
+
 
     @Override
     public void onAdded() {

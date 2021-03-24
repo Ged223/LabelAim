@@ -10,9 +10,11 @@ import com.almasb.fxgl.input.TriggerListener;
 import javafx.beans.property.StringProperty;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -95,6 +97,7 @@ public class GameApp extends GameApplication {
     @Override
     protected void initUI() {
         //create a text to display written characters
+        getGameScene().setBackgroundRepeat(FXGL.image("background.png"));
         Text written = new Text();
         written.setTranslateX(900);
         written.setTranslateY(getAppHeight() / 2 + 40);
