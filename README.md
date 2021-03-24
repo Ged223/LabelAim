@@ -13,11 +13,13 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - po stlaceni medzernika sa napisany text zmaze, a ak sa zhodoval s nejakym nepriatelom tak sa k tomu nepriatelovi vystreli navadzacia raketa
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
+- pridat zvukove efekty
+- zmenit font na krajsi
 - ...
 ## Rozdelenie uloh:
 ### Juraj:
 - pod hracom sa zobrazuje text ktory hrac napisal, po stlaceni medzernika sa napisany text zmaze - DONE
-- pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z)
+- pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z) - DONE
 - nepriatel ktoreho meno bolo napisane pri stlaceni medzernika zomrie/zmizne
 ### Barbora:
 - grafika hraca, nepriatelov, rakety, pozadie,
