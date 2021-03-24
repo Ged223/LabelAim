@@ -32,7 +32,7 @@ public class GameApp extends GameApplication {
         gameSettings.setWidth(1024);
         gameSettings.setHeight(576);
         gameSettings.setTitle("LabelAim");
-        gameSettings.setVersion("0.0");
+        gameSettings.setVersion("0.1");
     }
 
     public static void main(String[] args) {
