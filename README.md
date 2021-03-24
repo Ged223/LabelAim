@@ -19,7 +19,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Rozdelenie uloh:
 ### Juraj:
 - pod hracom sa zobrazuje text ktory hrac napisal, po stlaceni medzernika sa napisany text zmaze - DONE
-- pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z)
+- pod kazdym nepriatelom sa zobrazuje jeho nahodne vygenerovane meno (zatial to budu iba nahodne pismena A-Z) - DONE
 - nepriatel ktoreho meno bolo napisane pri stlaceni medzernika zomrie/zmizne
 ### Barbora:
 - grafika hraca, nepriatelov, rakety, pozadie,
