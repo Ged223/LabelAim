@@ -11,6 +11,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - zmenit font na krajsi
 - pridat zvukove efekty
 - pridat nekonecnu hudbu do pozadia
+- pohyb pozadia
 - ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock. 
 - pri vystreleni sa vystreli navadzacia raketa do nepriatela
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
