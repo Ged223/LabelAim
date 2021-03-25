@@ -13,6 +13,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock. 
 - pri vystreleni sa vystreli navadzacia raketa do nepriatela
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
+- urobit .zip subor na distribuciu hry bez instalovania inych veci
 - ...
 ## Rozdelenie uloh:
 ### Juraj:
