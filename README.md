@@ -16,7 +16,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ### Juraj:
 - kazdy nepriatel ma zobrazeny nahodne vygenerovany nazov, ktory moze byt hocijake slovo
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
-- pohyb pozadia
+- pohyb pozadia - DONE
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi
