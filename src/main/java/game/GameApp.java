@@ -8,12 +8,15 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.KeyTrigger;
 import com.almasb.fxgl.input.Trigger;
 import com.almasb.fxgl.input.TriggerListener;
+import com.almasb.fxgl.texture.Texture;
 import javafx.beans.property.StringProperty;
+import javafx.geometry.Orientation;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,7 +103,11 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI() {
-        getGameScene().setBackgroundRepeat(FXGL.image("background.png"));
+        //getGameScene().setBackgroundRepeat(FXGL.image("background.png"));
+        entityBuilder()
+                .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1025, 578, Orientation.HORIZONTAL, -25.0))
+                .zIndex(-1)
+                .buildAndAttach();
         //create a text to display written characters
         Text written = new Text();
         written.setStroke(Color.BLACK);
