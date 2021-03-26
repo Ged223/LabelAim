@@ -20,6 +20,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi
+- viac vrstiev backgroundu(presvitne s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami
 ### Patrik: 
 - animacie spritov sfunkcnit
 - pridat zvukove efekty
