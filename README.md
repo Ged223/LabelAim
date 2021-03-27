@@ -9,21 +9,25 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock. 
 - pri vystreleni sa vystreli navadzacia raketa do nepriatela
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
-- urobit .zip subor na distribuciu hry bez instalovania inych veci
+- urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 - ...
 
 ## Rozdelenie uloh do 1.4.2021:
 ### Juraj:
-- kazdy nepriatel ma zobrazeny nahodne vygenerovany nazov, ktory moze byt hocijake slovo
+- slova pod nepriatelmi sa ziskaju z .txt suboru
+    - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku.
+    - nepriatelia dostavaju svoje mena postupne ako su napisane v subore od zaciatku, ak sa dojde na koniec tak ide od zaciatku
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pohyb pozadia - DONE
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi
-- viac vrstiev backgroundu(presvitne s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami
+- viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami
 ### Patrik: 
 - animacie spritov sfunkcnit
-- pridat zvukove efekty
+- pridat zvukovy efekt znicenia nepriatela (vystrelenia s spravne napisanym slovom)
+- pridat iny zvukovy efekt vystrelenia bez znicenia nejakeho nepriatela
+- pridat zvukovy efekt pri napisani hocijakeho pismenka
 
 
 ## Rozdelenie uloh do 25.3.2021: (DONE)
