@@ -6,18 +6,18 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 public class NameComponent extends Component {
-
+    private NameProvider nameProvider;
     private String name;
     private Text nameText = new Text();
 
     public NameComponent() {
         nameText.setStroke(Color.WHITE);
+        nameProvider = new NameProvider();
     }
-
 
     @Override
     public void onAdded() {
-        name = generateName();
+        name = nameProvider.nextName();
         nameText.setText(name);
         FXGL.getGameScene().addUINode(nameText);
     }
@@ -34,7 +34,7 @@ public class NameComponent extends Component {
         FXGL.getGameScene().removeUINode(nameText);
     }
 
-    private String generateName() {
+    private String generateName() { //not used anymore, generates random A-Z letter
         char letter = (char) FXGL.random(65, 90);
         return Character.toString(letter);
     }
@@ -42,4 +42,6 @@ public class NameComponent extends Component {
     public String getName() {
         return name;
     }
+
+
 }
