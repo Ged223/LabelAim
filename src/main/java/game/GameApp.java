@@ -18,7 +18,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -47,6 +46,7 @@ public class GameApp extends GameApplication {
     @Override
     protected void onPreInit() {
         super.onPreInit();
+
     }
 
     @Override
@@ -55,20 +55,22 @@ public class GameApp extends GameApplication {
         getInput().addTriggerListener(new TriggerListener() {
             @Override
             protected void onActionBegin(Trigger trigger) {
-                System.out.println("Begin: " + trigger);
-                if (trigger.isKey()) {
-                    var keyTrigger = (KeyTrigger) trigger;
-                    // key is being pressed now
-                    var key = keyTrigger.getKey();
-                    if (key.equals(KeyCode.SPACE) || key.equals(KeyCode.ENTER)) {
-                        shoot();
-                    } else if (key.isLetterKey()) {
-                        //get the written property
-                        StringProperty written = getWorldProperties().stringProperty("written");
-                        //append the pressed key
-                        getWorldProperties().setValue("written", written.getValue() + key.toString());
-                    }
+                if (getWorldProperties().booleanProperty("isPaused").getValue() == false) {
+                    System.out.println("Begin: " + trigger);
+                    if (trigger.isKey()) {
+                        var keyTrigger = (KeyTrigger) trigger;
+                        // key is being pressed now
+                        var key = keyTrigger.getKey();
+                        if (key.equals(KeyCode.SPACE) || key.equals(KeyCode.ENTER)) {
+                            shoot();
+                        } else if (key.isLetterKey()) {
+                            //get the written property
+                            StringProperty written = getWorldProperties().stringProperty("written");
+                            //append the pressed key
+                            getWorldProperties().setValue("written", written.getValue() + key.toString());
+                        }
 
+                    }
                 }
             }
         });
@@ -77,11 +79,14 @@ public class GameApp extends GameApplication {
     @Override
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("written", "");
-        vars.put("enemyList", new ArrayList<Entity>());
+        vars.put("isPaused", false);
     }
 
     @Override
     protected void initGame() { //method to initialize all entities at the start of the game
+        FXGL.getGameController().resumeEngine();
+        NameProvider.nextWordIndex = 0;
+        getWorldProperties().booleanProperty("isPaused").setValue(false);
         getGameWorld().addEntityFactory(new OurFactory());
         spawn("player", 900, getAppHeight() / 2 - 20);
         run(() -> { //runs repeatedly

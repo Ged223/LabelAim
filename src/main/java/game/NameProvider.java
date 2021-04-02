@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class NameProvider {
 
     private static ArrayList<String> words = new ArrayList<>();
-    private static int nextWordIndex = 0;
+    public static int nextWordIndex = 0;
     public static String fileName = "words.txt";
 
 

@@ -29,7 +29,7 @@ public class OurFactory implements EntityFactory {
                 .with(new EnemyAnimationComponent())
                 .with(new ProjectileComponent(new Point2D(1, 0), 120))
                 .with(new NameComponent())
-                .with(new OffscreenCleanComponent())
+                .with(new OffScreenGameOverComponent())
                 .build();
     }
 
