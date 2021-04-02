@@ -19,6 +19,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
     - nepriatelia dostavaju svoje mena postupne ako su napisane v subore od zaciatku, ak sa dojde na koniec tak ide od zaciatku - DONE
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pohyb pozadia - DONE
+- stlacenim backspace sa vymaze posledne pismeno
+- podpora pisania kazdeho charakteru, nie len uppercase A-Z
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi
