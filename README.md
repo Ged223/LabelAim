@@ -14,9 +14,9 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 
 ## Rozdelenie uloh do 1.4.2021:
 ### Juraj:
-- slova pod nepriatelmi sa ziskaju z .txt suboru
-    - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku.
-    - nepriatelia dostavaju svoje mena postupne ako su napisane v subore od zaciatku, ak sa dojde na koniec tak ide od zaciatku
+- slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
+    - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku. - DONE
+    - nepriatelia dostavaju svoje mena postupne ako su napisane v subore od zaciatku, ak sa dojde na koniec tak ide od zaciatku - DONE
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over
 - pohyb pozadia - DONE
 ### Barbora:
