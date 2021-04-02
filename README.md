@@ -17,7 +17,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
     - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku. - DONE
     - nepriatelia dostavaju svoje mena postupne ako su napisane v subore od zaciatku, ak sa dojde na koniec tak ide od zaciatku - DONE
-- ak sa nepriatel dostane k hracovi, hrac prehral a je game over
+- ak sa nepriatel dostane k hracovi, hrac prehral a je game over - DONE
 - pohyb pozadia - DONE
 - stlacenim backspace sa vymaze posledne pismeno
 - podpora pisania kazdeho charakteru, nie len uppercase A-Z
