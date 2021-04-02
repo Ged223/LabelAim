@@ -12,7 +12,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 - ...
 
-## Rozdelenie uloh do 1.4.2021:
+## Rozdelenie uloh do 8.4.2021:
 ### Juraj:
 - slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
     - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku. - DONE
