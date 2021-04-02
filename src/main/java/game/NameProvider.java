@@ -4,20 +4,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class NameProvider {
 
-    private ArrayList<String> words = new ArrayList<>();
-    private int nextWordIndex;
+    private static ArrayList<String> words = new ArrayList<>();
+    private static int nextWordIndex = 0;
     public static String fileName = "words.txt";
 
-    public NameProvider() {
-        loadWordsFromFile();
-        nextWordIndex = 0;
-    }
 
-    private void loadWordsFromFile(){
+    public static void loadWordsFromFile(){
         String[] wordsArray = {"did","not","read","file","error"};
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -32,7 +27,7 @@ public class NameProvider {
         }
     }
 
-    public String nextName(){
+    public static String nextName(){
         String nextName = words.get(nextWordIndex);
         nextWordIndex = nextWordIndex + 1;
 
