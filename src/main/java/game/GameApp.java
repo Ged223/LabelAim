@@ -61,11 +61,16 @@ public class GameApp extends GameApplication {
                         var keyTrigger = (KeyTrigger) trigger;
                         // key is being pressed now
                         var key = keyTrigger.getKey();
+
+                        //get the written property
+                        StringProperty written = getWorldProperties().stringProperty("written");
+
                         if (key.equals(KeyCode.SPACE) || key.equals(KeyCode.ENTER)) {
                             shoot();
+                        } else if (key.equals(KeyCode.BACK_SPACE) && written.getValue().length() > 0) {
+                            //remove last character in string
+                            getWorldProperties().setValue("written", written.getValue().substring(0, written.getValue().length() - 1));
                         } else if (key.isLetterKey()) {
-                            //get the written property
-                            StringProperty written = getWorldProperties().stringProperty("written");
                             //append the pressed key
                             getWorldProperties().setValue("written", written.getValue() + key.toString());
                         }
