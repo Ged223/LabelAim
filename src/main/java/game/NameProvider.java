@@ -12,8 +12,8 @@ public class NameProvider {
     public static String fileName = "words.txt";
 
 
-    public static void loadWordsFromFile(){
-        String[] wordsArray = {"did","not","read","file","error"};
+    public static void loadWordsFromFile() {
+        String[] wordsArray = {"did", "not", "read", "file", "error"};
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             wordsArray = reader.readLine().split(" ");
@@ -27,17 +27,17 @@ public class NameProvider {
         }
     }
 
-    public static String nextName(){
+    public static String nextName() {
         String nextName = words.get(nextWordIndex);
         nextWordIndex = nextWordIndex + 1;
 
-        if(nextWordIndex >= words.size()){
+        if (nextWordIndex >= words.size()) {
             nextWordIndex = 0;
         }
 
         nextName = nextName.trim()
                 .toUpperCase()
-                .replaceAll("[^A-Z\\-']",""); //vymaze vsetko okrem velkych A-Z pismen a pomlcky(-) a apostrofu(') z kazdeho slova
+                .replaceAll("[^A-Z\\-']", ""); //vymaze vsetko okrem velkych A-Z pismen a pomlcky(-) a apostrofu(') z kazdeho slova
 
         return nextName;
     }

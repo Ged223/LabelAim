@@ -17,15 +17,15 @@ public class OffScreenGameOverComponent extends Component {
     @Override
     public void onUpdate(double tpf) {
         super.onUpdate(tpf);
-        if (entity.getX() > 1024){
+        if (entity.getX() > 1024) {
             getWorldProperties().booleanProperty("isPaused").setValue(true);
             FXGL.getGameController().pauseEngine();
             Text text = new Text();
             text.setFont(new Font(60));
             text.setStroke(Color.WHITE);
             text.setStrokeWidth(1.5);
-            text.setTranslateX(FXGL.getAppWidth()/2-350);
-            text.setTranslateY(FXGL.getAppHeight()/2);
+            text.setTranslateX(FXGL.getAppWidth() / 2 - 350);
+            text.setTranslateY(FXGL.getAppHeight() / 2);
             text.setText("           GAME OVER\n press CTRL+R to restart");
             FXGL.getGameScene().addUINode(text);
         }
