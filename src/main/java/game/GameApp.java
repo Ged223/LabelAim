@@ -115,9 +115,24 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI() {
-        //getGameScene().setBackgroundRepeat(FXGL.image("background.png"));
         entityBuilder()
-                .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1025, 578, Orientation.HORIZONTAL, -25.0))
+                .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, -25.0))
+                .zIndex(-5)
+                .buildAndAttach();
+        entityBuilder()
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsTiny.png"), 1024, 576, Orientation.HORIZONTAL, -10.0))
+                .zIndex(-4)
+                .buildAndAttach();
+        entityBuilder()
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsSmall.png"), 1024, 576, Orientation.HORIZONTAL, -20.0))
+                .zIndex(-3)
+                .buildAndAttach();
+        entityBuilder()
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsMedium.png"), 1024, 576, Orientation.HORIZONTAL, -35.0))
+                .zIndex(-2)
+                .buildAndAttach();
+        entityBuilder()
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsLarge.png"), 1024, 576, Orientation.HORIZONTAL, -40.0))
                 .zIndex(-1)
                 .buildAndAttach();
         //create a text to display written characters
