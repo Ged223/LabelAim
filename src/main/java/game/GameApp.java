@@ -93,7 +93,7 @@ public class GameApp extends GameApplication {
         NameProvider.nextWordIndex = 0;
         getWorldProperties().booleanProperty("isPaused").setValue(false);
         getGameWorld().addEntityFactory(new OurFactory());
-        spawn("player", 900, getAppHeight() / 2 - 20);
+        spawn("player", 850, getAppHeight() / 2 - 20);
         run(() -> { //runs repeatedly
             spawn("enemy", FXGLMath.randomPoint(
                     new Rectangle2D(0, 20, 0, getAppHeight() - 150))
@@ -160,7 +160,7 @@ public class GameApp extends GameApplication {
         List<Entity> enemies = getGameWorld().getEntitiesByType(EntityType.ENEMY);
         for (Entity enemy : enemies) {
             if (enemy.getComponent(NameComponent.class).getName().equals(writtenName)) {
-                enemy.removeFromWorld();
+                enemy.getComponent(EnemyAnimationComponent.class).onDeath();
             }
         }
     }

@@ -24,9 +24,9 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi
-- viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami
+- viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami - DONE
 ### Patrik: 
-- animacie spritov sfunkcnit
+- animacie spritov sfunkcnit - DONE
 - pridat zvukovy efekt znicenia nepriatela (vystrelenia s spravne napisanym slovom)
 - pridat iny zvukovy efekt vystrelenia bez znicenia nejakeho nepriatela
 - pridat zvukovy efekt pri napisani hocijakeho pismenka

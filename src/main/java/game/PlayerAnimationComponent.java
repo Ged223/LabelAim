@@ -19,7 +19,7 @@ public class PlayerAnimationComponent extends Component {
 
     @Override
     public void onAdded() {
-        entity.getTransformComponent().setScaleOrigin(new Point2D(16, 21));
+        entity.getTransformComponent().setScaleOrigin(new Point2D(77,60));
         entity.getViewComponent().addChild(texture);
         entity.setScaleX(-1);
     }
@@ -27,6 +27,7 @@ public class PlayerAnimationComponent extends Component {
     @Override
     public void onUpdate(double tpf) {
         super.onUpdate(tpf);
+        if (texture.getAnimationChannel()==animIdle)
         texture.loopAnimationChannel(animWalk);
     }
 
