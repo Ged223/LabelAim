@@ -116,7 +116,7 @@ public class GameApp extends GameApplication {
     @Override
     protected void initUI() {
         entityBuilder()
-                .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, -25.0))
+                .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, 0))
                 .zIndex(-5)
                 .buildAndAttach();
         entityBuilder()
@@ -124,15 +124,15 @@ public class GameApp extends GameApplication {
                 .zIndex(-4)
                 .buildAndAttach();
         entityBuilder()
-                .view(new SelfScrollingBackgroundView(FXGL.image("starsSmall.png"), 966, 562, Orientation.HORIZONTAL, -20.0))
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsSmall.png"), 966, 562, Orientation.HORIZONTAL, -30.0))
                 .zIndex(-3)
                 .buildAndAttach();
         entityBuilder()
-                .view(new SelfScrollingBackgroundView(FXGL.image("starsMedium.png"), 996, 540, Orientation.HORIZONTAL, -35.0))
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsMedium.png"), 996, 540, Orientation.HORIZONTAL, -75.0))
                 .zIndex(-2)
                 .buildAndAttach();
         entityBuilder()
-                .view(new SelfScrollingBackgroundView(FXGL.image("starsLarge.png"), 872, 549, Orientation.HORIZONTAL, -40.0))
+                .view(new SelfScrollingBackgroundView(FXGL.image("starsLarge.png"), 872, 549, Orientation.HORIZONTAL, -150.0))
                 .zIndex(-1)
                 .buildAndAttach();
         //create a text to display written characters
