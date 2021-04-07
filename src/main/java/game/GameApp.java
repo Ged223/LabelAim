@@ -9,6 +9,7 @@ import com.almasb.fxgl.input.KeyTrigger;
 import com.almasb.fxgl.input.Trigger;
 import com.almasb.fxgl.input.TriggerListener;
 import com.almasb.fxgl.texture.Texture;
+import com.almasb.fxgl.ui.FontFactory;
 import javafx.beans.property.StringProperty;
 import javafx.geometry.Orientation;
 import javafx.geometry.Rectangle2D;
@@ -115,6 +116,7 @@ public class GameApp extends GameApplication {
 
     @Override
     protected void initUI() {
+        FontFactory gameFont = getAssetLoader().loadFont("ARCADECLASSIC.TTF");
         entityBuilder()
                 .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, 0))
                 .zIndex(-5)
@@ -140,8 +142,8 @@ public class GameApp extends GameApplication {
         written.setStroke(Color.BLACK);
         written.setFill(Color.WHITE);
         written.strokeWidthProperty().setValue(1.5);
-        written.setFont(new Font(35));
-        written.setTranslateX(getAppWidth() / 2 - 15);
+        written.setFont(gameFont.newFont(50));
+        written.setTranslateX(getAppWidth() / 2 - 100);
         written.setTranslateY(getAppHeight() - 20);
         //bind so that it always displays the value of the world property "written"
         written.textProperty().bind(FXGL.getWorldProperties().stringProperty("written"));
