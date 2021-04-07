@@ -22,10 +22,10 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over - DONE
 - pohyb pozadia - DONE
 - stlacenim backspace sa vymaze posledne pismeno - DONE
+- zmenit font na lepsi - DONE
 - podpora pisania kazdeho charakteru, nie len uppercase A-Z
 ### Barbora:
 - poskytnut font textu - DONE
-- zmenit font na lepsi
 - viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami - DONE
 ### Patrik: 
 - animacie spritov sfunkcnit - DONE
