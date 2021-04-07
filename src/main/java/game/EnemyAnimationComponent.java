@@ -39,6 +39,7 @@ public class EnemyAnimationComponent extends Component {
     public void onDeath() {
         entity.getComponent(ProjectileComponent.class).setSpeed(0);
         texture.playAnimationChannel(animBoom);
+        FXGL.play("explosion.wav");
         runOnce(() -> {
             entity.removeFromWorld();
         }, seconds(1.5));
