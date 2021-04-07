@@ -6,6 +6,8 @@ Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich m
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
 - pridat nekonecnu hudbu do pozadia
+- nastavenie obtiaznosti (rychlosti spawnovania nepriatelov)
+- nastavenie ci chceme slova nahodne zoradene alebo zaradom tak ako su v words.txt
 - ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock. 
 - pri vystreleni sa vystreli navadzacia raketa do nepriatela
 - pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
