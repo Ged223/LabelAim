@@ -160,10 +160,15 @@ public class GameApp extends GameApplication {
         getWorldProperties().setValue("written", "");
 
         List<Entity> enemies = getGameWorld().getEntitiesByType(EntityType.ENEMY);
+        boolean foundAtLeastOneEnemy = false;
         for (Entity enemy : enemies) {
             if (enemy.getComponent(NameComponent.class).getName().equals(writtenName)) {
                 enemy.getComponent(EnemyAnimationComponent.class).onDeath();
+                foundAtLeastOneEnemy = true;
             }
+        }
+        if(!foundAtLeastOneEnemy){
+            FXGL.play("beep-error.wav");
         }
     }
 
