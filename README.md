@@ -31,9 +31,9 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami - DONE
 ### Patrik: 
 - animacie spritov sfunkcnit - DONE
-- pridat zvukovy efekt znicenia nepriatela (vystrelenia s spravne napisanym slovom) -DONE
-- pridat iny zvukovy efekt vystrelenia bez znicenia nejakeho nepriatela -DONE
-- pridat zvukovy efekt pri napisani hocijakeho pismenka
+- pridat zvukovy efekt znicenia nepriatela (vystrelenia s spravne napisanym slovom) - DONE
+- pridat iny zvukovy efekt vystrelenia bez znicenia nejakeho nepriatela - DONE
+- pridat zvukovy efekt pri napisani hocijakeho pismenka - DONE
 
 
 ## Rozdelenie uloh do 25.3.2021: (DONE)
