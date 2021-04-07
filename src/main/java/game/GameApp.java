@@ -70,9 +70,11 @@ public class GameApp extends GameApplication {
                             shoot();
                         } else if (key.equals(KeyCode.BACK_SPACE) && written.getValue().length() > 0) {
                             //remove last character in string
+                            FXGL.play("keypress.wav");
                             getWorldProperties().setValue("written", written.getValue().substring(0, written.getValue().length() - 1));
                         } else if (key.isLetterKey()) {
                             //append the pressed key
+                            FXGL.play("keypress.wav");
                             getWorldProperties().setValue("written", written.getValue() + key.toString());
                         }
 
