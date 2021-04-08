@@ -9,16 +9,15 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Rozdelenie uloh do 15.4.2021:
 
 ### Juraj:
-- ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock a zaroven sa prehraje zvuk
-- postupne zrychlovanie hry
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
+
 ### Barbora:
-- pocitanie skore (prezity cas, zniceny nepriatelia, pocet vystreleni)
+- pocet znicenych nepriatelov = score (1 bod = 1 nepriatel)
+- zobrazenie terajsieho score a highscore niekde vpravo hore v rohu alebo tak
 
 ### Patrik: 
 - pridat nekonecnu hudbu do pozadia
-- words per minute calculator
-
+- postupne zrychlovanie hry
 
 ## Rozdelenie uloh do 8.4.2021: (DONE)
 ### Juraj:
