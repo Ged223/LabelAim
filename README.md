@@ -20,7 +20,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - words per minute calculator
 
 
-## Rozdelenie uloh do 8.4.2021:
+## Rozdelenie uloh do 8.4.2021: (DONE)
 ### Juraj:
 - slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
     - text v subore je v formate normalnych viet, bez enterov(linebreakov \n) cize v jednom riadku. - DONE
