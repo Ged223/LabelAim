@@ -5,17 +5,20 @@
 Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich meno.
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
-- otacanie raketky na nepriatela zniceneho
-- pridat nekonecnu hudbu do pozadia
+
+## Rozdelenie uloh do 15.4.2021:
+
+### Juraj:
+- ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock a zaroven sa prehraje zvuk
 - postupne zrychlovanie hry
-- words per minute calculator
-- nastavenie obtiaznosti (rychlosti spawnovania nepriatelov)
-- nastavenie ci chceme slova nahodne zoradene alebo zaradom tak ako su v words.txt
-- ak sa aktualne napisany text zhoduje s nejakym nepriatelom, ukaze sa na nom crosshair/target lock. 
-- pri vystreleni sa vystreli navadzacia raketa do nepriatela
-- pocitanie skore (prezity cas, zniceny nepriatelia, vystrelene rakety,)
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
-- ...
+### Barbora:
+- pocitanie skore (prezity cas, zniceny nepriatelia, pocet vystreleni)
+
+### Patrik: 
+- pridat nekonecnu hudbu do pozadia
+- words per minute calculator
+
 
 ## Rozdelenie uloh do 8.4.2021:
 ### Juraj:
@@ -25,13 +28,12 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - ak sa nepriatel dostane k hracovi, hrac prehral a je game over - DONE
 - pohyb pozadia - DONE
 - stlacenim backspace sa vymaze posledne pismeno - DONE
-- podpora pisania kazdeho charakteru, nie len uppercase A-Z - rozpracovane
-
 
 ### Barbora:
 - poskytnut font textu - DONE
 - zmenit font na lepsi - DONE
 - viac vrstiev backgroundu(bez pozadia s hviezdami, iba uplne spodny je cely zafarbeny) ktore sa budu hybat roznymi rychlostami - DONE
+
 ### Patrik: 
 - animacie spritov sfunkcnit - DONE
 - pridat zvukovy efekt znicenia nepriatela (vystrelenia s spravne napisanym slovom) - DONE
