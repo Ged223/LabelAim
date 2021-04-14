@@ -29,6 +29,7 @@ import static javafx.util.Duration.millis;
 import static javafx.util.Duration.seconds;
 
 public class GameApp extends GameApplication {
+    public int scoreInt = 0;
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
@@ -115,10 +116,11 @@ public class GameApp extends GameApplication {
     protected void initPhysics() {
         super.initPhysics();
     }
-
     @Override
     protected void initUI() {
         FontFactory gameFont = getAssetLoader().loadFont("ARCADECLASSIC.TTF");
+        //well it's not working
+        asiScore();
         entityBuilder()
                 .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, 0))
                 .zIndex(-5)
@@ -167,11 +169,25 @@ public class GameApp extends GameApplication {
             if (enemy.getComponent(NameComponent.class).getName().equals(writtenName)) {
                 enemy.getComponent(EnemyAnimationComponent.class).onDeath();
                 foundAtLeastOneEnemy = true;
+                scoreInt = scoreInt+1;
             }
         }
         if(!foundAtLeastOneEnemy){
             FXGL.play("beep-error.wav");
         }
+    }
+    protected void asiScore(){
+        FontFactory gameFont = getAssetLoader().loadFont("ARCADECLASSIC.TTF");
+        Text Score = new Text();
+        Score.setText(Integer.toString(scoreInt));
+        Score.setX(0);
+        Score.setY(0);
+        Score.setStroke(Color.BLACK);
+        Score.setFill(Color.WHITE);
+        Score.strokeWidthProperty().setValue(1.5);
+        Score.setFont(gameFont.newFont(25));
+        getGameScene().addUINode(Score);
+
     }
 
 }
