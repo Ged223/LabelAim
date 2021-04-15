@@ -7,7 +7,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
 - pripravit na konecnu prezentaciu
 
-## Rozdelenie uloh do 15.4.2021:
+## Rozdelenie uloh do 22.4.2021:
 ### Juraj:
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 
