@@ -10,15 +10,18 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Rozdelenie uloh do 22.4.2021:
 ### Juraj:
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
-
+- pripravit na konecnu prezentaciu
+- 
 ### Barbora:
 - pocet znicenych nepriatelov = score (1 bod = 1 nepriatel) - DONE
 - zobrazenie terajsieho score niekde vpravo hore v rohu - DONE
-
+- pripravit na konecnu prezentaciu
+- 
 ### Patrik: 
 - pridat nekonecnu hudbu do pozadia
 - postupne zrychlovanie hry
-
+- pripravit na konecnu prezentaciu
+- 
 ## Rozdelenie uloh do 8.4.2021: (DONE)
 ### Juraj:
 - slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
