@@ -12,7 +12,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 
 ### Barbora:
-- pocet znicenych nepriatelov = score (1 bod = 1 nepriatel)
+- pocet znicenych nepriatelov = score (1 bod = 1 nepriatel) - DONE
 - zobrazenie terajsieho score niekde vpravo hore v rohu - DONE
 
 ### Patrik: 
