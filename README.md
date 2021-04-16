@@ -13,7 +13,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 
 ### Barbora:
 - pocet znicenych nepriatelov = score (1 bod = 1 nepriatel)
-- zobrazenie terajsieho score a highscore niekde vpravo hore v rohu alebo tak
+- zobrazenie terajsieho score niekde vpravo hore v rohu alebo tak
 
 ### Patrik: 
 - pridat nekonecnu hudbu do pozadia
