@@ -8,7 +8,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 
 ## Rozdelenie uloh do 22.4.2021:
 ### Juraj:
-- postupne zrychlovanie hry
+- upravit FXGL menu aby obsahovalo len pouzitelne tlacitka alebo ho uplne vypnut lebo nema ziadne vyuzitie momentalne
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 - pripravit na konecnu prezentaciu
 
@@ -18,6 +18,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - pripravit na konecnu prezentaciu
 
 ### Patrik: 
+- postupne zrychlovanie hry
+    - bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu 
 - pridat nekonecnu hudbu do pozadia
 - pripravit na konecnu prezentaciu
 
