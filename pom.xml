@@ -38,6 +38,22 @@
                     <release>11</release>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.6</version>
+                <configuration>
+                    <stripDebug>true</stripDebug>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                    <launcher>LabelAim</launcher>
+                    <jlinkImageName>labelAim</jlinkImageName>
+                    <jlinkZipName>labelAim</jlinkZipName>
+                    <mainClass>game.GameApp</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
