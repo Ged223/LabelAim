@@ -5,23 +5,23 @@
 Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich meno.
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
-- pripravit na konecnu prezentaciu
-- ukladanie HighScore lokalne na pc a nacitanie pri spusteni hry, zobrazenie highscore pod score
+
 ## Rozdelenie uloh do 22.4.2021:
 ### Juraj:
+- postupne zrychlovanie hry
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 - pripravit na konecnu prezentaciu
-- 
+
 ### Barbora:
 - pocet znicenych nepriatelov = score (1 bod = 1 nepriatel) - DONE
 - zobrazenie terajsieho score niekde vpravo hore v rohu - DONE
 - pripravit na konecnu prezentaciu
-- 
+
 ### Patrik: 
 - pridat nekonecnu hudbu do pozadia
-- postupne zrychlovanie hry
 - pripravit na konecnu prezentaciu
-- 
+
+
 ## Rozdelenie uloh do 8.4.2021: (DONE)
 ### Juraj:
 - slova pod nepriatelmi sa ziskaju z .txt suboru - DONE
