@@ -89,6 +89,7 @@ public class GameApp extends GameApplication {
         vars.put("written", "");
         vars.put("isPaused", false);
         vars.put("score","0");
+        vars.put("speedOfNewEnemies",100);
     }
 
     @Override
@@ -98,18 +99,28 @@ public class GameApp extends GameApplication {
         getWorldProperties().booleanProperty("isPaused").setValue(false);
         getGameWorld().addEntityFactory(new OurFactory());
         spawn("player", 850, getAppHeight() / 2 - 20);
-        run(() -> { //runs repeatedly
-            spawn("enemy", FXGLMath.randomPoint(
-                    new Rectangle2D(0, 20, 0, getAppHeight() - 150))
-                    //spawn enemy on a random point within the bounds(Rectangle2D)
-            );
-        }, millis(1000));//set the interval of the run method
 
+        spawnEnemies(1000);
 
         runOnce(() -> {
             var input = getSceneService().getInput();
             input.rebind(input.getActionByName("Screenshot"), KeyCode.F12);
         }, seconds(0.1));
+    }
+
+    protected void spawnEnemies(int interval){
+        runOnce(() -> {
+            //spawn enemy on a random point within the bounds(Rectangle2D)
+            spawn("enemy", FXGLMath.randomPoint(new Rectangle2D(0, 20, 0, getAppHeight() - 150)));
+            if(interval <= 500){
+                spawnEnemies(interval);
+                System.out.println("Interval is at fastest possible value: "+interval+"ms");
+            }else{
+                spawnEnemies(interval-2);
+                System.out.println("Interval is now: "+(interval-2));
+                getWorldProperties().setValue("speedOfNewEnemies",getWorldProperties().getInt("speedOfNewEnemies")+1);
+            }
+        }, millis(interval));//set the delay of spawning the run method
     }
 
     @Override
