@@ -6,18 +6,16 @@ Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich m
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
 - pripravit na konecnu prezentaciu
+- urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
 ## Rozdelenie uloh do 22.4.2021:
 ### Juraj:
 
 - postupne zrychlovanie hry - DONE
-    - bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu - DONE
-- urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
-
+- bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu - DONE
 
 ### Barbora:
 - pocet znicenych nepriatelov = score (1 bod = 1 nepriatel) - DONE
 - zobrazenie terajsieho score niekde vpravo hore v rohu - DONE
-
 
 ### Patrik: 
 - upravit FXGL menu aby obsahovalo len pouzitelne tlacitka alebo ho uplne vypnut lebo nema ziadne vyuzitie momentalne
