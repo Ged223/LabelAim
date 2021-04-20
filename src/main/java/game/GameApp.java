@@ -2,6 +2,8 @@ package game;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.audio.Audio;
+import com.almasb.fxgl.audio.Music;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
@@ -18,6 +20,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
+import javafx.util.Duration;
+
 
 import java.util.List;
 
@@ -100,6 +104,7 @@ public class GameApp extends GameApplication {
         getGameWorld().addEntityFactory(new OurFactory());
         spawn("player", 850, getAppHeight() / 2 - 20);
 
+
         spawnEnemies(1000);
 
         runOnce(() -> {
@@ -140,6 +145,14 @@ public class GameApp extends GameApplication {
         scoreText.strokeWidthProperty().setValue(1.1);
         scoreText.setFont(gameFont.newFont(30));
         getGameScene().addUINode(scoreText);
+
+        //music
+        FXGL.play("loop.wav");
+        run(() -> {
+            FXGL.play("loop.wav");
+        },Duration.seconds(4));
+
+
         //background layers
         entityBuilder()
                 .view(new SelfScrollingBackgroundView(FXGL.image("background.png"), 1024, 576, Orientation.HORIZONTAL, 0))
