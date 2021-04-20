@@ -11,7 +11,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ### Juraj:
 
 - postupne zrychlovanie hry - DONE
-- bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu - DONE
+    - bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu - DONE
 
 ### Barbora:
 - pocet znicenych nepriatelov = score (1 bod = 1 nepriatel) - DONE
