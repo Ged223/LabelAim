@@ -36,8 +36,9 @@ public class GameApp extends GameApplication {
         gameSettings.setHeight(576);
         gameSettings.setTitle("LabelAim");
         gameSettings.setVersion("0.1");
-        NameProvider.loadWordsFromFile();
+        gameSettings.setSceneFactory(new OurSceneFactory());
 
+        NameProvider.loadWordsFromFile();
     }
 
     public static void main(String[] args) {
