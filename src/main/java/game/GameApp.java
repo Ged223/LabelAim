@@ -105,6 +105,8 @@ public class GameApp extends GameApplication {
         getGameWorld().addEntityFactory(new OurFactory());
         spawn("player", 850, getAppHeight() / 2 - 20);
 
+        //music
+        FXGL.loopBGM("loop.wav");
 
         spawnEnemies(1000);
 
@@ -146,13 +148,6 @@ public class GameApp extends GameApplication {
         scoreText.strokeWidthProperty().setValue(1.1);
         scoreText.setFont(gameFont.newFont(30));
         getGameScene().addUINode(scoreText);
-
-        //music
-        FXGL.play("loop.wav");
-        run(() -> {
-            FXGL.play("loop.wav");
-        },Duration.seconds(4));
-
 
         //background layers
         entityBuilder()
