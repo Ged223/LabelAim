@@ -7,7 +7,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
 - pripravit na konecnu prezentaciu
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
-## Rozdelenie uloh do 22.4.2021:
+
+## Rozdelenie uloh do 22.4.2021: - DONE
 ### Juraj:
 
 - postupne zrychlovanie hry - DONE
@@ -18,8 +19,8 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 - zobrazenie terajsieho score niekde vpravo hore v rohu - DONE
 
 ### Patrik: 
-- upravit FXGL menu aby obsahovalo len pouzitelne tlacitka alebo ho uplne vypnut lebo nema ziadne vyuzitie momentalne
-- pridat nekonecnu hudbu do pozadia
+- upravit FXGL menu aby obsahovalo len pouzitelne tlacitka alebo ho uplne vypnut lebo nema ziadne vyuzitie momentalne - DONE
+- pridat nekonecnu hudbu do pozadia - DONE
 
 ## Rozdelenie uloh do 8.4.2021: (DONE)
 ### Juraj:
