@@ -5,12 +5,20 @@
 Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich meno.
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
 ## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
+
+
+## Dokoncenie okolitych veci do 29.4.2021 na prezentovanie:
 - pripravit na konecnu prezentaciu
-- urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd.
+    -urobit dokumentaciu
+    -urobit navod
+    -pptx prezentaciu urobit
+    
+- urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd. - DONE
+    - dat release tu na github na stiahnutie - DONEE
 
 ## Rozdelenie uloh do 22.4.2021: - DONE
-### Juraj:
 
+### Juraj:
 - postupne zrychlovanie hry - DONE
     - bude sa poctom znicenych nepriatelov menit rychlost objavovania nepriatelov a rychlost ich pohybu - DONE
 
