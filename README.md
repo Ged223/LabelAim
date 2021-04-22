@@ -9,9 +9,9 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 
 ## Dokoncenie okolitych veci do 29.4.2021 na prezentovanie:
 - pripravit na konecnu prezentaciu - https://docs.google.com/document/d/168bta_bJDOfOUxRpOhdCskRu0FcPxZzE/edit podla tohto
-    -urobit dokumentaciu
-    -urobit navod
-    -pptx prezentaciu urobit
+    - urobit dokumentaciu
+    - urobit navod
+    - pptx prezentaciu urobit
     
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd. - DONE
     - dat release tu na github na stiahnutie - DONEE
