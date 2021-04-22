@@ -2,30 +2,22 @@ package game;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
-import com.almasb.fxgl.audio.Audio;
-import com.almasb.fxgl.audio.Music;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.KeyTrigger;
 import com.almasb.fxgl.input.Trigger;
 import com.almasb.fxgl.input.TriggerListener;
-import com.almasb.fxgl.texture.Texture;
 import com.almasb.fxgl.ui.FontFactory;
 import javafx.beans.property.StringProperty;
 import javafx.geometry.Orientation;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
-import javafx.util.Duration;
-
 
 import java.util.List;
-
-
 import java.util.Map;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
@@ -93,8 +85,8 @@ public class GameApp extends GameApplication {
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("written", "");
         vars.put("isPaused", false);
-        vars.put("score","0");
-        vars.put("speedOfNewEnemies",100);
+        vars.put("score", "0");
+        vars.put("speedOfNewEnemies", 100);
     }
 
     @Override
@@ -116,17 +108,17 @@ public class GameApp extends GameApplication {
         }, seconds(0.1));
     }
 
-    protected void spawnEnemies(int interval){
+    protected void spawnEnemies(int interval) {
         runOnce(() -> {
             //spawn enemy on a random point within the bounds(Rectangle2D)
             spawn("enemy", FXGLMath.randomPoint(new Rectangle2D(0, 20, 0, getAppHeight() - 150)));
-            if(interval <= 500){
+            if (interval <= 500) {
                 spawnEnemies(interval);
-                System.out.println("Interval is at fastest possible value: "+interval+"ms");
-            }else{
-                spawnEnemies(interval-2);
-                System.out.println("Interval is now: "+(interval-2));
-                getWorldProperties().setValue("speedOfNewEnemies",getWorldProperties().getInt("speedOfNewEnemies")+1);
+                System.out.println("Interval is at fastest possible value: " + interval + "ms");
+            } else {
+                spawnEnemies(interval - 2);
+                System.out.println("Interval is now: " + (interval - 2));
+                getWorldProperties().setValue("speedOfNewEnemies", getWorldProperties().getInt("speedOfNewEnemies") + 1);
             }
         }, millis(interval));//set the delay of spawning the run method
     }
@@ -135,6 +127,7 @@ public class GameApp extends GameApplication {
     protected void initPhysics() {
         super.initPhysics();
     }
+
     @Override
     protected void initUI() {
         FontFactory gameFont = getAssetLoader().loadFont("ARCADECLASSIC.TTF");
@@ -201,15 +194,16 @@ public class GameApp extends GameApplication {
 
                 //score += 1;
                 getWorldProperties().setValue(
-                        "score",Integer.toString((Integer.parseInt(getWorldProperties().getString("score"))+1))
+                        "score", Integer.toString((Integer.parseInt(getWorldProperties().getString("score")) + 1))
                 );
             }
         }
-        if(!foundAtLeastOneEnemy){
+        if (!foundAtLeastOneEnemy) {
             FXGL.play("beep-error.wav");
         }
     }
-    protected void asiScore(){
+
+    protected void asiScore() {
         FontFactory gameFont = getAssetLoader().loadFont("ARCADECLASSIC.TTF");
 
 

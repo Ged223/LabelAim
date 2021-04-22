@@ -7,12 +7,12 @@ import com.almasb.fxgl.app.scene.SceneFactory;
 public class OurSceneFactory extends SceneFactory {
 
     @Override
-    public FXGLMenu newMainMenu(){
+    public FXGLMenu newMainMenu() {
         return new OurMenu(MenuType.MAIN_MENU);
     }
 
     @Override
-    public FXGLMenu newGameMenu(){
+    public FXGLMenu newGameMenu() {
         return new OurMenu(MenuType.GAME_MENU);
     }
 
