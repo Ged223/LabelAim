@@ -5,6 +5,7 @@ import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.audio.Music;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.KeyTrigger;
 import com.almasb.fxgl.input.Trigger;
@@ -16,7 +17,6 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import com.almasb.fxgl.dsl.views.SelfScrollingBackgroundView;
 
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class GameApp extends GameApplication {
         gameSettings.setWidth(1024);
         gameSettings.setHeight(576);
         gameSettings.setTitle("LabelAim");
-        gameSettings.setVersion("0.1");
+        gameSettings.setVersion("");
         gameSettings.setSceneFactory(new OurSceneFactory());
 
         NameProvider.loadWordsFromFile();
@@ -74,15 +74,15 @@ public class GameApp extends GameApplication {
                             //append the pressed key
                             FXGL.play("keypress.wav");
                             getWorldProperties().setValue("written", written.getValue() + key.toString());
-                        } else if (key.equals(KeyCode.NUMPAD0)){
-                            if(getWorldProperties().getBoolean("isMusicOn")){
+                        } else if (key.equals(KeyCode.NUMPAD0)) {
+                            if (getWorldProperties().getBoolean("isMusicOn")) {
                                 FXGL.getAudioPlayer().stopAllMusic();
-                                getWorldProperties().setValue("isMusicOn",false);
-                            }else{
+                                getWorldProperties().setValue("isMusicOn", false);
+                            } else {
                                 //music
                                 Music music = FXGL.getAssetLoader().loadMusic("loop.wav");
                                 FXGL.getAudioPlayer().loopMusic(music);
-                                getWorldProperties().setValue("isMusicOn",true);
+                                getWorldProperties().setValue("isMusicOn", true);
                             }
                         }
 
@@ -98,7 +98,7 @@ public class GameApp extends GameApplication {
         vars.put("isPaused", false);
         vars.put("score", "0");
         vars.put("speedOfNewEnemies", 100);
-        vars.put("isMusicOn",true);
+        vars.put("isMusicOn", true);
     }
 
     @Override
