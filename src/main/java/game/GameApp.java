@@ -2,6 +2,7 @@ package game;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.audio.Music;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
@@ -73,6 +74,16 @@ public class GameApp extends GameApplication {
                             //append the pressed key
                             FXGL.play("keypress.wav");
                             getWorldProperties().setValue("written", written.getValue() + key.toString());
+                        } else if (key.equals(KeyCode.NUMPAD0)){
+                            if(getWorldProperties().getBoolean("isMusicOn")){
+                                FXGL.getAudioPlayer().stopAllMusic();
+                                getWorldProperties().setValue("isMusicOn",false);
+                            }else{
+                                //music
+                                Music music = FXGL.getAssetLoader().loadMusic("loop.wav");
+                                FXGL.getAudioPlayer().loopMusic(music);
+                                getWorldProperties().setValue("isMusicOn",true);
+                            }
                         }
 
                     }
@@ -87,6 +98,7 @@ public class GameApp extends GameApplication {
         vars.put("isPaused", false);
         vars.put("score", "0");
         vars.put("speedOfNewEnemies", 100);
+        vars.put("isMusicOn",true);
     }
 
     @Override
@@ -98,7 +110,8 @@ public class GameApp extends GameApplication {
         spawn("player", 850, getAppHeight() / 2 - 20);
 
         //music
-        FXGL.loopBGM("loop.wav");
+        Music music = FXGL.getAssetLoader().loadMusic("loop.wav");
+        FXGL.getAudioPlayer().loopMusic(music);
 
         spawnEnemies(1000);
 
