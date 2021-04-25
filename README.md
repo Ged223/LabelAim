@@ -10,7 +10,7 @@ Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/
 ## Dokoncenie okolitych veci do 29.4.2021 na prezentovanie:
 - pripravit na konecnu prezentaciu - https://docs.google.com/document/d/168bta_bJDOfOUxRpOhdCskRu0FcPxZzE/edit podla tohto
     - urobit dokumentaciu - https://docs.google.com/document/d/1OmXHqYg4Ngtyu5hxFgFg-vustnD0t2t53OdQhuPa2Gg/edit?usp=sharing
-    - urobit navod - https://docs.google.com/document/d/10jF_aQfjkLya31BnElLmH0AIme---tK5pgmmHt9R6x0/edit?usp=sharing
+    - urobit navod - https://docs.google.com/document/d/1btoDdW8_uMVyZl82KpFctoB_ON5D5AaL6Z6heK9mJ0A/edit?usp=sharing
     - prezentaciu urobit - https://docs.google.com/presentation/d/176Nu4BZVZNrFtglqEMKeDwpfJRA4f4ZxPwJZ0RC-Sa4/edit?usp=sharing
     
 - urobit .zip subor na distribuciu hry inym ludom bez instalovania inych veci ako java atd. - DONE
