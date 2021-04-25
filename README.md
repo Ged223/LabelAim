@@ -4,8 +4,6 @@
 ## Hlavný cieľ:
 Urobiť hru, kde hrac zostrielava nepriatelov tym, ze na klavesnici napise ich meno.
 Tu je screen z podobnej hry: ![image](https://user-images.githubusercontent.com/42540086/110616730-2e30ea80-8195-11eb-9cdb-c523b327122c.png)
-## Nápady na features/ulohy na rozdelenie (navrchu najvyssia priorita):
-
 
 ## Dokoncenie okolitych veci do 29.4.2021 na prezentovanie:
 - pripravit na konecnu prezentaciu - https://docs.google.com/document/d/168bta_bJDOfOUxRpOhdCskRu0FcPxZzE/edit podla tohto
