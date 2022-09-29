@@ -1,3 +1,6 @@
+This was a school project, and this readme was used for an attempt at coordination between team members.
+
+---
 
 ### Názov týmu: SlabiProgramatori
 ### Členovia tymu: Juraj Seman, Barbora Horvátová, Patrik Ištván
